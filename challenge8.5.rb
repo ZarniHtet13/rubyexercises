@@ -2,41 +2,42 @@
 
 # Variable scope
 
-# #a 
-# z = [1, 2, 3, 5, 6,7]
+#a 
+z = [1, 2, 3, 5, 6,7]
 
-# z = z.each do |l|
-#   if l.even?
-#     z.delete(l)
-#   end
-# end
-# puts z
+z = z.each do |l|
+  if l.even?
+    z.delete(l)
+  end
+end
+puts z
 
-# #b
-# a = ['ZarNi', 'HtEt', 'ChrIs', 'TeA', 'LEaf']
+#b
+a = ['ZarNi', 'HtEt', 'ChrIs', 'TeA', 'LEaf']
 
-# a.each do |l|
-#   if l.is_a? String
-#      l.downcase
-#   end
-# end 
-# puts a
+a.each do |l|
+  if l.is_a? String
+     l.downcase
+  end
+end 
+puts a
 
-# #c
-# a = ['ZarNi', 'HtEt', 'ChrIs', 'TeA', 'LEaf']
+#c
+a = ['ZarNi', 'HtEt', 'ChrIs', 'TeA', 'LEaf']
 
-# a.each do |l|
-# 	if l.is_a? String
-# 		 l.downcase!
-# 	end
-# end 
-# puts a
+a.each do |l|
+	if l.is_a? String
+		 l.downcase!
+	end
+end 
+puts a
 
-# #2 do-end blocks
-# xorm = 'z'
+#2 do-end blocks
+xorm = 'z'
 
-
-
+# Take out the comment puts variables, you will see that local variable
+# is not properly scoped
+# We should avoid the do end blocks
 3.times do
   chem = 'Phu'
   puts chem
@@ -44,7 +45,7 @@
     xo = 'Nwe'
     puts xo
   end
-  puts xo
+  #puts xo
 end
 #puts chem
 
